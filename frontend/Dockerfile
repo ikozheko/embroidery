@@ -4,7 +4,7 @@ WORKDIR /app/
 
 COPY . /app/
 RUN npm install
-RUN npm build
+RUN npm run build
 
 FROM nginx
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
