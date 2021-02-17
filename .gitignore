@@ -1,5 +1,6 @@
+.history/
 .vscode/
-backend/.idea
+**/.idea
 **/__pycache__/
 backend/dev.env
 venv/
