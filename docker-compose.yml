@@ -19,13 +19,8 @@ services:
     depends_on:
       - db
   frontend:
-    build: ./frontend/
-    command: ng serve --host 0.0.0.0 --disableHostCheck true    
+    build: ./frontend/    
     depends_on:
       - backend
-  nginx:
-    build: ./nginx/
     ports:
       - 8080:80
-    depends_on:
-      - frontend
