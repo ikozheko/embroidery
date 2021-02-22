@@ -3,31 +3,53 @@
   justify-content: space-between;
   align-content: center;
   font-weight: bold;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 15px;
 
   div {
     width: 15%;
     text-align: right;
     color: mediumslateblue;
   }
+  div:last-child {
+    width: 20%;
+  }
 }
 
 .floss-thread-list {
   list-style: none;
   padding-left: 0;
+  border: 1px solid mediumslateblue;
 }
 
 .floss-thread {
   display: flex;
   justify-content: space-between;
   align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
 
   div {
     width: 15%;
     text-align: right;
     padding: 3px;
   }
+  @keyframes expand_color_preview {
+    to {
+      padding: 15px;
+    }
+  }
   div:hover {
     cursor: pointer;
     background-color: mediumslateblue;
+    display: block;
+  }
+  div.color:hover {
+    animation-name: expand_color_preview;
+    animation-duration: 0.5s;
+  }
+  div:last-child {
+    width: 20%;
   }
 }

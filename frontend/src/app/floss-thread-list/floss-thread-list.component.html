@@ -5,8 +5,8 @@
   <div class="madeira">Madeira</div>
   <div class="color">Color</div>
 </div>
-<ul class="floss-thread-list" *ngFor="let item of flossThreadList">
-  <li class="floss-thread">
+<ul class="floss-thread-list">
+  <li class="floss-thread" *ngFor="let item of flossThreadList">
     <div class="gamma">{{item.gamma}}</div>
     <div class="dmc">{{item.dmc}}</div>
     <div class="anchor">{{item.anchor}}</div>
@@ -14,4 +14,3 @@
     <div class="color" attr.data-color="{{item.color}}">{{item.color}}</div>
   </li>
 </ul>
-

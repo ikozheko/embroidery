@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {FlossThread} from "../floss-thread";
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import {FLOSS_THREAD_LIST} from "../mock-floss-thread";
+import {invertColor} from '../app.component';
 
 
 @Component({
@@ -8,7 +8,7 @@ import {FLOSS_THREAD_LIST} from "../mock-floss-thread";
   templateUrl: './floss-thread-list.component.html',
   styleUrls: ['./floss-thread-list.component.less']
 })
-export class FlossThreadListComponent implements OnInit {
+export class FlossThreadListComponent implements AfterViewInit, OnInit {
 
   flossThreadList = FLOSS_THREAD_LIST;
 
@@ -16,7 +16,19 @@ export class FlossThreadListComponent implements OnInit {
 
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+
+  }
+
+  ngAfterViewInit(): void {
+    document.querySelectorAll('.floss-thread .color').forEach(
+      item => {
+        let i = item as HTMLElement
+        let c = item.getAttribute('data-color')
+        i.style.backgroundColor = c || 'white'
+        i.style.color = invertColor(c || 'black', true)
+      }
+    )
 
   }
 
