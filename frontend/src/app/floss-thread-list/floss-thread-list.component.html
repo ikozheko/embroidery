@@ -1,0 +1,17 @@
+<div class="floss-thread-list-headers">
+  <div class="gamma">Gamma</div>
+  <div class="dmc">DMC</div>
+  <div class="anchor">Anchor</div>
+  <div class="madeira">Madeira</div>
+  <div class="color">Color</div>
+</div>
+<ul class="floss-thread-list" *ngFor="let item of flossThreadList">
+  <li class="floss-thread">
+    <div class="gamma">{{item.gamma}}</div>
+    <div class="dmc">{{item.dmc}}</div>
+    <div class="anchor">{{item.anchor}}</div>
+    <div class="madeira">{{item.madeira}}</div>
+    <div class="color" attr.data-color="{{item.color}}">{{item.color}}</div>
+  </li>
+</ul>
+
