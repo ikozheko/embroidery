@@ -1,0 +1,25 @@
+{
+  "threads": [
+    {
+      "gamma": "0086",
+      "dmc": "995",
+      "anchor": "410",
+      "madeira": "1102",
+      "color": "#0064b0"
+    },
+    {
+      "gamma": "3118",
+      "dmc": "312",
+      "anchor": "979",
+      "madeira": "1005",
+      "color": "#2d426b"
+    },
+    {
+      "gamma": "0410",
+      "dmc": "902",
+      "anchor": "44",
+      "madeira": "2607",
+      "color": "#581727"
+    }
+  ]
+}

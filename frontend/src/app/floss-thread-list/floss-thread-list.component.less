@@ -1,3 +1,7 @@
+@ui_color: mediumslateblue;
+@ui_border_radius: 4px;
+
+
 .floss-thread-list-headers {
   display: flex;
   justify-content: space-between;
@@ -10,7 +14,7 @@
   div {
     width: 15%;
     text-align: right;
-    color: mediumslateblue;
+    color: @ui_color;
   }
   div:last-child {
     width: 20%;
@@ -20,15 +24,13 @@
 .floss-thread-list {
   list-style: none;
   padding-left: 0;
-  border: 1px solid mediumslateblue;
+  border: 1px solid @ui_color;
 }
 
 .floss-thread {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  padding-left: 10px;
-  padding-right: 10px;
 
   div {
     width: 15%;
@@ -42,7 +44,7 @@
   }
   div:hover {
     cursor: pointer;
-    background-color: mediumslateblue;
+    background-color: @ui_color;
     display: block;
   }
   div.color:hover {
@@ -51,5 +53,25 @@
   }
   div:last-child {
     width: 20%;
+  }
+}
+
+form[name="search"] {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+
+  input {
+    display: block;
+    margin-right: 10px;
+    border: 1px solid @ui_color;
+    border-radius: 4px;
+    font-size: x-large;
+    padding: 5px 15px;
+
+  }
+  fa-icon {
+    display: block;
+    color: @ui_color;
   }
 }

@@ -1,3 +1,9 @@
+<form name="search" method="post">
+  <input name="q" [(ngModel)]="filter" (keydown.enter)="onFilter()">
+  <button type="button" (click)="onFilter()">
+    <fa-icon class="fixed fa-2x" [icon]="iconSearch"></fa-icon>
+  </button>
+</form>
 <div class="floss-thread-list-headers">
   <div class="gamma">Gamma</div>
   <div class="dmc">DMC</div>
@@ -6,7 +12,7 @@
   <div class="color">Color</div>
 </div>
 <ul class="floss-thread-list">
-  <li class="floss-thread" *ngFor="let item of flossThreadList">
+  <li class="floss-thread" *ngFor="let item of items">
     <div class="gamma">{{item.gamma}}</div>
     <div class="dmc">{{item.dmc}}</div>
     <div class="anchor">{{item.anchor}}</div>
