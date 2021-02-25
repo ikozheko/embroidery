@@ -17,6 +17,6 @@
     <div class="dmc">{{item.dmc}}</div>
     <div class="anchor">{{item.anchor}}</div>
     <div class="madeira">{{item.madeira}}</div>
-    <div class="color" attr.data-color="{{item.color}}">{{item.color}}</div>
+    <div class="color" [style.background-color]="item.color" [style.color]="getInvertColor(item.color)">{{item.color}}</div>
   </li>
 </ul>
